@@ -13,8 +13,6 @@ export default class WeatherData implements Subject {
     return this._humidity;
   }
 
-  constructor() {}
-
   public registerObserver(observer: Observer) {
     this.observers.push(observer);
   }
@@ -33,7 +31,10 @@ export default class WeatherData implements Subject {
     this.notifyObservers();
   }
 
-  public setMeasurements(temperature: number, humidity: number) {
+  public setMeasurements(
+    temperature: number,
+    humidity: number
+  ) {
     this._temperature = temperature;
     this._humidity = humidity;
     this.measurementsChanged();

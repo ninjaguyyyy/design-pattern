@@ -1,7 +1,9 @@
 ﻿import { DisplayElement, Observer } from ".";
 import WeatherData from "./WeatherData";
 
-export default class ForecastDisplay implements Observer, DisplayElement {
+export default class ForecastDisplay
+  implements Observer, DisplayElement
+{
   private temperature: number;
   private humidity: number;
   private weatherData: WeatherData;
